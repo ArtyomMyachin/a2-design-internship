@@ -16,6 +16,16 @@
     margin: 0 auto;
 }
 
+.bold-text {
+    font-weight: bold;
+}
+
+h2 {
+    text-transform: uppercase;
+    font: 36px / 48px "Acme", sans-serif;
+    text-align: center;
+}
+
 header {
     background: url("../images/header-bg.png") no-repeat center center / cover;
     color: #fff;
@@ -57,7 +67,7 @@ nav a {
 }
 
 .header-title {
-    margin-top: 32px;
+    margin: 9px 0px;
     font: 96px "Acme", sans-serif;
     text-align: center;
 }
@@ -66,7 +76,7 @@ nav a {
     width: 60px;
     border-bottom: 5px solid #E8C300;
     border-radius: 50px;
-    margin: 35px auto 0px auto;
+    margin: 0 auto;
 }
 
 .header-buttons {
@@ -101,3 +111,115 @@ nav li:active, .header-button:active {
     float: right;
     margin-right: 420px;
 }
+
+.about-us {
+    margin-top: 50px;
+}
+
+.about-us-description {
+    color: #000;
+    float: left;
+    width: 600px;
+    margin: 167px 10px 20px 65px;
+    text-align: center;
+}
+
+.about-us-picture {
+    float: right;
+}
+
+.about-us-title {
+    margin: 0px 0px 8px 60px;
+}
+
+.about-us-description .empty {
+    margin-left: 300px;
+}
+
+.about-us-subtitle {
+    margin: 12px 0px 25px 0px;
+    font: bold 18px / 28px "Open Sans", sans-serif;
+}
+
+.about-us-text {
+    font: 14px "Open Sans", sans-serif;
+}
+
+.book-table-picture {
+    float: left;
+}
+
+.book-table-form {
+    float: right;
+    width: 565px;
+    margin: 120px 60px 0px 0px;
+}
+
+.book-table-title {
+    margin: 0 0px 8px 0;
+}
+
+.book-form {
+    margin-top: 12px;
+}
+
+.book-form table {
+    border-spacing: 10px;
+}
+
+.book-form input, select {
+    width: 275px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 20px;
+    background: #E5E5E5;
+    border: none;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #E5E5E5 url("../images/list-marker.png") no-repeat right 1.2em center;
+    color: rgba(51, 51, 51, 0.5);
+    font: 14px "Open Sans", sans-serif;
+}
+
+.book-form input:focus {
+     background: #ffffff;
+     border: 1px solid #E8C300;
+ }
+
+.book-form input::placeholder {
+    color: rgba(51, 51, 51, 0.5);
+    font: 14px "Open Sans", sans-serif;
+}
+
+.book-form input:focus::placeholder {
+    color: #ffffff;
+}
+
+.button {
+    font: bold 12px / 20px "Open Sans", sans-serif;
+    color: #ffffff;;
+    background: #E8C300;
+    width: 550px;
+    height: 60px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.button:active {
+    background: #c0f755;
+}
+
+.book-table-footer {
+    font: 12px / 12px "Open Sans", sans-serif;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+
+
