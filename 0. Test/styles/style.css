@@ -59,11 +59,15 @@ nav a {
     text-transform: uppercase;
 }
 
-.header-subtitle {
-    margin-top: 155px;
+h3 {
     text-align: center;
     font: bold 12px / 14px "Open Sans", sans-serif;
     letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+
+.header-subtitle {
+    margin-top: 155px;
 }
 
 .header-title {
@@ -120,7 +124,7 @@ nav li:active, .header-button:active {
     color: #000;
     float: left;
     width: 600px;
-    margin: 167px 10px 20px 65px;
+    margin: 167px 10px 20px 70px;
     text-align: center;
 }
 
@@ -142,7 +146,7 @@ nav li:active, .header-button:active {
 }
 
 .about-us-text {
-    font: 14px "Open Sans", sans-serif;
+    font: 14px / 24px "Open Sans", sans-serif;
 }
 
 .book-table-picture {
@@ -167,7 +171,7 @@ nav li:active, .header-button:active {
     border-spacing: 10px;
 }
 
-.book-form input, select {
+input, select, textarea {
     width: 275px;
     height: 60px;
     border-radius: 5px;
@@ -185,17 +189,17 @@ select {
     font: 14px "Open Sans", sans-serif;
 }
 
-.book-form input:focus {
+input:focus, textarea:focus {
      background: #ffffff;
      border: 1px solid #E8C300;
  }
 
-.book-form input::placeholder {
+input::placeholder, textarea::placeholder {
     color: rgba(51, 51, 51, 0.5);
     font: 14px "Open Sans", sans-serif;
 }
 
-.book-form input:focus::placeholder {
+input:focus::placeholder, textarea:focus::placeholder {
     color: #ffffff;
 }
 
@@ -222,5 +226,85 @@ select {
     margin: 70px 0 45px 0;
 }
 
+.specialties {
+    color: rgba(255, 255, 255, 0.9);
+    background: url("../images/specialties.png") no-repeat center center / cover;
+    padding: 45px 0 50px 0;
+}
 
+.specialties-picture {
+    float: left;
+}
 
+.specialties-description {
+    float: right;
+    width: 600px;
+    text-align: center;
+    margin-right: 65px;
+}
+
+.specialties-title {
+    margin: 170px 0 8px 0;
+}
+
+.specialties-subtitle {
+    margin: 12px 0px 25px 0px;
+    font: bold 18px / 28px "Open Sans", sans-serif;
+}
+
+.specialties-text {
+    font: 14px / 24px "Open Sans", sans-serif;
+}
+
+.contact-title {
+    margin: 90px 0 8px 0;
+}
+
+.contact-subtitle {
+    margin: 25px auto 50px auto;
+    font: bold 18px / 28px "Open Sans", sans-serif;
+    width: 565px;
+    text-align: center;
+}
+
+.contact-table {
+    width: 1155px;
+    margin: 0 auto;
+    border-spacing: 8px;
+}
+
+.contact input {
+    width: 380px;
+}
+
+textarea {
+    width: 1156px;
+    height: 120px;
+}
+
+.send-button {
+    margin: 43px auto 72px auto;
+    width: 640px;
+    height: 60px;
+    background: #E8C300;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFFFFF;
+    font: bold 12px / 20px "Open Sans", sans-serif;
+    text-transform: uppercase;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.footer-text {
+    text-align: center;
+    font: 12px / 12px "Open Sans", sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 39px;
+}
