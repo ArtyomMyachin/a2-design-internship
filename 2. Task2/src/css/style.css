@@ -36,6 +36,31 @@ body {
     width: 630px;
 }
 
+.navbar__logo-button {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu-button {
+    background: none;
+    border: none;
+    height: 36px;
+    width: 26px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    display: none;
+}
+
+.navbar__menu-line {
+    display: block;
+    width: 26px;
+    height: 6px;
+    background-color: #fff;
+    margin: 2px 0;
+}
+
 .navbar__navigation {
     display: flex;
     align-items: center;
@@ -259,7 +284,6 @@ body {
 
 .cards__list {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     align-items: stretch;
     flex-flow: wrap;
@@ -293,4 +317,59 @@ body {
     width: 50%;
     height: 100vh;
     /*background: url("../assets/images/map.png") no-repeat center center / cover;*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 1065px){
+    .navbar__menu-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar__city-list, .navbar__links {
+        display: none;
+    }
+
+    .navbar__city-search {
+        width: 520px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar__logo {
+        margin-left: 30px;
+    }
+
+    .navbar__search {
+        width: 297px;
+    }
+
+    .navbar__account-button {
+        margin-left: 0;
+    }
+
+    .main-menu {
+        display: none;
+    }
+
+    .slider {
+        height: 339px;
+        background: url("../assets/images/bg-tablet.png") no-repeat center center / cover;
+    }
+
+    .filters-wrap {
+        justify-content: space-between;
+    }
+
+    .filters__form {
+        margin-right: 20px;
+        width: 425px;
+        justify-content: space-between;
+    }
+
+    .filters__list, .filters__list:first-child, .filters__list:last-child {
+        margin: 0;
+    }
 }
