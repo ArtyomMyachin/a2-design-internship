@@ -29,24 +29,29 @@ body {
     justify-content: space-between;
 }
 
+.navbar__city-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 630px;
+}
+
+.navbar__navigation {
+    display: flex;
+    align-items: center;
+}
+
 .navbar__logo {
-    margin-right: 37px;
-    /*margin-right: calc((100% - 971px) * 0.086);*/
+    flex-shrink: 0;
 }
 
 .navbar__search {
     display: flex;
     align-items: center;
     width: 500px;
-    justify-content: space-between;
-    margin-right: 347px;
-    /*margin-left: auto;*/
-    /*margin-right: 24.1%;*/
-    /*margin-right: calc((100% - 971px) * 0.812);*/
 }
 
 .navbar__search-field {
-    /*width: 80%;*/
     width: 380px;
     padding: 13px 0 18px 47px;
     border: 1px solid #C2C2C2;
@@ -71,14 +76,11 @@ body {
     padding-right: 14px;
     font: 600 16px / 20px "Source Sans Pro", sans-serif;
     color: #FFFFFF;
+    margin-left: 21px;
 }
 
 .navbar__links {
-    margin-right: 43px;
-    /*margin-left: auto;*/
-    /*margin-right: 3%;*/
-    /*margin-right: calc((100% - 971px) * 0.1);*/
-    /*width: 18.47%;*/
+
 }
 
 .navbar__links-list {
@@ -107,7 +109,7 @@ body {
 .navbar__account-button {
     display: flex;
     align-items: center;
-    width: 132px;
+    width: 134px;
     padding: 0;
     justify-content: space-between;
     text-transform: capitalize;
@@ -115,7 +117,7 @@ body {
     color: #FFFFFF;
     border: none;
     background: none;
-    /*margin-left: auto;*/
+    margin-left: 43px;
 }
 
 .navbar__signing-icon {
@@ -132,10 +134,11 @@ body {
 
 .main-menu__links-list {
     margin: 0 auto;
-    padding: 0 auto;
+    width: 100%;
+    max-width: 840px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-transform: uppercase;
     font: 600 18px / 24px "Source Sans Pro", sans-serif;
 }
@@ -198,10 +201,7 @@ body {
 }
 
 .filters__list {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 18px 30px 19px 5px;
+    padding: 18px 45px 19px 5px;
     border: 1px solid #C2C2C2;
     border-radius: 3px;
     text-transform: capitalize;
@@ -220,27 +220,77 @@ body {
 
 .content {
     display: flex;
-    align-items: center;
 }
 
 .cards {
     width: 50%;
 }
 
-.cards-text-wrap {
+.cards__main-wrap {
+    max-width: 654px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cards-wrap {
     display: flex;
     justify-content: space-between;
+}
+
+.cards__text {
+    margin: 18px auto;
+
+}
+
+.cards__results {
+    font: 14px / 18px "Source Sans Pro", sans-serif;
+    color: #1C2E36;
+    text-transform: capitalize;
+}
+
+.cards__sort {
+    font: 14px / 18px "Source Sans Pro", sans-serif;
+    color: #1C2E36;
+    text-transform: capitalize;
+    padding: 0 18px 0 0;
+    background: url("../assets/images/chevron-down-black.png") no-repeat bottom 3px right 3px;
+    border: none;
 }
 
 .cards__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: stretch;
     flex-flow: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.cards__item {
+    width: 210px;
+    height: 258px;
+    /*padding-bottom: 40px;*/
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards__title {
+    font: 19px / 22px "Actor", sans-serif;
+    color: #1C2E36;
+    margin-top: 13px;
+}
+
+.cards__price {
+    margin-top: auto;
+    font: 18px / 21px "Actor", sans-serif;
+    color: #0084BA;
 }
 
 .map {
     width: 50%;
-    height: 770px;
-    background: url("../assets/images/map.png") no-repeat center center / cover;
+    height: 100vh;
+    /*background: url("../assets/images/map.png") no-repeat center center / cover;*/
 }
