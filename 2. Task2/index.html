@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="src/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet">
+        <script src="src/scripts/script.js"></script>
     </head>
     <body>
         <header class="header">
@@ -14,7 +15,7 @@
                     <div class="navbar-wrap">
                         <div class="navbar__city-search">
                             <div class="navbar__logo-button">
-                                <button class="navbar__menu-button">
+                                <button class="navbar__menu-button js-open-menu-button" onclick="toggleMenu()">
                                     <span class="navbar__menu-line"></span>
                                     <span class="navbar__menu-line"></span>
                                     <span class="navbar__menu-line"></span>
@@ -80,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main-menu">
+            <div class="main-menu js-main-menu">
                 <div class="container">
                     <nav class="main-menu__links">
                         <ul class="main-menu__links-list">
@@ -95,7 +96,7 @@
             </div>
         </header>
 
-        <main>
+        <main class="main">
             <section class="title">
                 <div class="container">
                     <div class="title__category">
@@ -107,7 +108,22 @@
                 </div>
             </section>
             <section class="slider">
-
+                <div class="slider__item active-picture">
+                    <img src="src/assets/images/slider/1.png" alt="slider picture" class="slider__picture">
+                </div>
+                <div class="slider__item">
+                    <img src="src/assets/images/slider/2.png" alt="slider picture" class="slider__picture">
+                </div>
+                <div class="slider-button-wrap">
+                    <div class="slider__buttons">
+                        <button class="slider__button button-prev" onclick="changeSlide(-1)">
+                            <img src="src/assets/images/slider-button-left.png" alt="previous picture" class="slider__button-image">
+                        </button>
+                        <button class="slider__button button-next" onclick="changeSlide(1)">
+                            <img src="src/assets/images/slider-button-right.png" alt="next picture" class="slider__button-image">
+                        </button>
+                    </div>
+                </div>
             </section>
             <aside class="filters">
                 <div class="container">
@@ -126,17 +142,97 @@
                         </form>
                     </div>
                     <div class="filters__buttons">
-                        <button class="filters__list filters__map">
+                        <button class="filters__list filters__map active-content-button" onclick="showMap()">
                             map
                         </button>
-                        <button class="filters__list filters__filter">
+                        <button class="filters__list filters__cards" onclick="showList()">
+                            list
+                        </button>
+                        <button class="filters__list filters__filter" onclick="showFilters()">
                             filter
                         </button>
+                    </div>
+                    <div class="filters_mobile">
+<!--                        <form class="filters-form_mobile">-->
+                            <button class="filters-close" onclick="hideFilters()">
+                                Filter
+                            </button>
+                            <div class="filters__category">
+                                <div class="filters__category-title-wrap">
+                                    <span class="filters__category-title">subcategories</span>
+                                    <span class="filters__black-rect"></span>
+                                </div>
+                                <label class="filter_mobile" for="s1">
+                                    <input type="checkbox" class="filters__check_mobile" id="s1">
+                                    Art Museums
+                                </label>
+                                <label class="filter_mobile" for="s2">
+                                    <input type="checkbox" class="filters__check_mobile" id="s2">
+                                    History Museums
+                                </label>
+                                <label class="filter_mobile" for="s3">
+                                    <input type="checkbox" class="filters__check_mobile" id="s3">
+                                    Outdoor Museums
+                                </label>
+                            </div>
+                            <div class="filters__category">
+                                <div class="filters__category-title-wrap">
+                                    <span class="filters__category-title">neighborhoods</span>
+                                    <span class="filters__black-rect"></span>
+                                </div>
+                                <label class="filter_mobile" for="n1">
+                                    <input type="checkbox" class="filters__check_mobile" id="n1">
+                                    Flatron
+                                </label>
+                                <label class="filter_mobile" for="n2">
+                                    <input type="checkbox" class="filters__check_mobile" id="n2">
+                                    Chelsea
+                                </label>
+                                <label class="filter_mobile" for="n3">
+                                    <input type="checkbox" class="filters__check_mobile" id="n3">
+                                    Financial District
+                                </label>
+                                <label class="filter_mobile" for="n4">
+                                    <input type="checkbox" class="filters__check_mobile" id="n4">
+                                    Upper East Side
+                                </label>
+                                <label class="filter_mobile" for="n5">
+                                    <input type="checkbox" class="filters__check_mobile" id="n5">
+                                    Upper West Side
+                                </label>
+                            </div>
+                            <div class="filters__category filters__category_last">
+                                <div class="filters__category-title-wrap">
+                                    <span class="filters__category-title">duration</span>
+                                    <span class="filters__black-rect"></span>
+                                </div>
+                                <label class="filter_mobile" for="d1">
+                                    <input type="checkbox" class="filters__check_mobile" id="d1">
+                                    Up to 1 Hour
+                                </label>
+                                <label class="filter_mobile" for="d2">
+                                    <input type="checkbox" class="filters__check_mobile" id="d2">
+                                    1-6 Hours
+                                </label>
+                                <label class="filter_mobile" for="d3">
+                                    <input type="checkbox" class="filters__check_mobile" id="d3">
+                                    4 Hours to 1 Day
+                                </label>
+                                <label class="filter_mobile" for="d4">
+                                    <input type="checkbox" class="filters__check_mobile" id="d4">
+                                    More Than 1 Day
+                                </label>
+                            </div>
+                            <div class="filters__buttons-wrap_mobile">
+                                <button class="filter__button_mobile filter__reset" onclick="resetForm()">reset</button>
+                                <button class="filter__button_mobile filter__go" onclick="hideFilters()">go</button>
+                            </div>
+<!--                        </form>-->
                     </div>
                 </div>
             </aside>
             <section class="content">
-                <div class="cards">
+                <div class="cards active-content">
                     <div class="container">
                         <div class="cards__main-wrap">
                             <div class="cards-wrap cards__text">
