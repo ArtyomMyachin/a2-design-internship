@@ -242,8 +242,9 @@ body {
     display: block;
 }
 
-.slider-button-wrap {
-
+.slider__picture {
+    height: 100%;
+    max-height: 416px;
 }
 
 .slider__button {
@@ -399,6 +400,7 @@ body {
 
 .cards {
     width: 50%;
+    padding: 20px;
 }
 
 .cards__main-wrap {
@@ -434,26 +436,32 @@ body {
 
 .cards__list {
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
     flex-flow: wrap;
-    margin: 0;
     padding: 0;
 }
 
 .cards__item {
-    width: 210px;
-    height: 258px;
+    width: calc((100% - 40px) / 3);
+    margin-right: 20px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.cards__item:nth-child(3n) {
+    margin-right: 0;
+}
+
 .cards__title {
     font: 19px / 22px "Actor", sans-serif;
     color: #1C2E36;
     margin-top: 13px;
+}
+
+.cards__picture {
+    height: 100%;
+    min-height: 139px;
 }
 
 .cards__price {
@@ -529,6 +537,19 @@ body {
 
     .filters__list, .filters__list:first-child, .filters__list:last-child {
         margin: 0;
+    }
+
+    .cards {
+        padding: 13px;
+    }
+
+    .cards__item {
+        width: calc((100% - 13px) / 2);
+        margin-right: 13px;
+    }
+
+    .cards__item:nth-child(2n) {
+        margin-right: 0;
     }
 }
 
@@ -679,7 +700,16 @@ body {
         width: 100vh;
     }
 
-    .fading {
-        background: rgba(0, 0, 0, 0.71);
+    .cards {
+        padding: 20px;
+    }
+
+    .cards__item {
+        width: calc((100% - 40px) / 3);
+        margin-right: 20px;
+    }
+
+    .cards__item:nth-child(3n) {
+        margin-right: 0;
     }
 }
