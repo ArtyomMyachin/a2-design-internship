@@ -2,7 +2,6 @@ var sliderIndex = 0;
 window.addEventListener("scroll", scrollHandle);
 
 function toggleMenu() {
-    // var openMenuButton = document.querySelector(".js-open-menu-button");
     var menu = document.querySelector(".js-main-menu");
     var main = document.querySelector(".main");
     menu.classList.toggle("opened");
@@ -20,38 +19,30 @@ function changeSlide(n) {
 }
 
 function scrollHandle() {
-    // var filtersPanel = document.querySelector(".filters");
-    // var map = document.querySelector(".map");
-    // if(window.scrollY >= filtersPanel.offsetTop) {
-    //     filtersPanel.classList.add("fixed");
-    //     map.classList.add("fixed");
-    //     return;
-    // }
-    // filtersPanel.classList.remove("fixed");
-    // map.classList.remove("fixed");
+    var filtersPanel = document.querySelector(".filters");
+    var filters = document.querySelector(".filters-main-wrap");
+    var map = document.querySelector(".map");
+    if(window.scrollY >= filtersPanel.offsetTop) {
+        filters.classList.add("filters-fixed");
+        map.classList.add("map-fixed");
+        return;
+    }
+    filters.classList.remove("filters-fixed");
+    map.classList.remove("map-fixed");
 }
 
 function showFilters() {
     var filtersPanel = document.querySelector(".filters_mobile");
-    var content = document.querySelector(".active-content");
+    var fade = document.querySelector(".fade-block");
     filtersPanel.classList.add("filters-opened");
-    content.classList.add("fading");
+    fade.classList.add("fade-open");
 }
 
 function hideFilters() {
     var filtersPanel = document.querySelector(".filters_mobile");
-    var content = document.querySelector(".active-content");
+    var fade = document.querySelector(".fade-block");
     filtersPanel.classList.remove("filters-opened");
-    content.classList.remove("fading");
-}
-
-function resetForm() {
-    // var filtersMobile = document.querySelector(".filters-form_mobile");
-    // filtersMobile.reset();
-    // var filtersChecks = document.querySelectorAll(".filters_mobile input:c");
-    // for(c in filtersChecks) {
-    //     c.value = false;
-    // }
+    fade.classList.remove("fade-open");
 }
 
 function showMap() {

@@ -108,10 +108,10 @@
                 </div>
             </section>
             <section class="slider">
-                <div class="slider__item active-picture">
+                <div class="slider__item active-picture fade">
                     <img src="src/assets/images/slider/1.png" alt="slider picture" class="slider__picture">
                 </div>
-                <div class="slider__item">
+                <div class="slider__item fade">
                     <img src="src/assets/images/slider/2.png" alt="slider picture" class="slider__picture">
                 </div>
                 <div class="slider-button-wrap">
@@ -127,108 +127,114 @@
             </section>
             <aside class="filters">
                 <div class="container">
-                    <div class="filters-wrap">
-                        <h2 class="filters__title">museums</h2>
-                        <form class="filters__form">
-                            <button class="filters__list">
-                                subcategories
+                    <div class="filters-main-wrap">
+                        <div class="filters-wrap">
+                            <h2 class="filters__title">museums</h2>
+                            <form class="filters__form">
+                                <button class="filters__list">
+                                    subcategories
+                                </button>
+                                <button class="filters__list">
+                                    neighborhoods
+                                </button>
+                                <button class="filters__list">
+                                    duration
+                                </button>
+                            </form>
+                        </div>
+                        <div class="filters__buttons">
+                            <button class="filters__list filters__map active-content-button" onclick="showMap()">
+                                map
                             </button>
-                            <button class="filters__list">
-                                neighborhoods
+                            <button class="filters__list filters__cards" onclick="showList()">
+                                list
                             </button>
-                            <button class="filters__list">
-                                duration
+                            <button class="filters__list filters__filter" onclick="showFilters()">
+                                filter
                             </button>
-                        </form>
+                        </div>
                     </div>
-                    <div class="filters__buttons">
-                        <button class="filters__list filters__map active-content-button" onclick="showMap()">
-                            map
-                        </button>
-                        <button class="filters__list filters__cards" onclick="showList()">
-                            list
-                        </button>
-                        <button class="filters__list filters__filter" onclick="showFilters()">
-                            filter
-                        </button>
-                    </div>
+
                     <div class="filters_mobile">
-<!--                        <form class="filters-form_mobile">-->
-                            <button class="filters-close" onclick="hideFilters()">
-                                Filter
-                            </button>
-                            <div class="filters__category">
-                                <div class="filters__category-title-wrap">
-                                    <span class="filters__category-title">subcategories</span>
-                                    <span class="filters__black-rect"></span>
+                        <div class="filters-block">
+                            <form class="filters-form_mobile" action="JavaScript:Void(0)">
+                                <button class="filters-close" onclick="hideFilters()">
+                                    Filter
+                                </button>
+                                <div class="filters__category">
+                                    <div class="filters__category-title-wrap">
+                                        <span class="filters__category-title">subcategories</span>
+                                        <span class="filters__black-rect"></span>
+                                    </div>
+                                    <label class="filter_mobile" for="s1">
+                                        <input type="checkbox" class="filters__check_mobile" id="s1">
+                                        Art Museums
+                                    </label>
+                                    <label class="filter_mobile" for="s2">
+                                        <input type="checkbox" class="filters__check_mobile" id="s2">
+                                        History Museums
+                                    </label>
+                                    <label class="filter_mobile" for="s3">
+                                        <input type="checkbox" class="filters__check_mobile" id="s3">
+                                        Outdoor Museums
+                                    </label>
                                 </div>
-                                <label class="filter_mobile" for="s1">
-                                    <input type="checkbox" class="filters__check_mobile" id="s1">
-                                    Art Museums
-                                </label>
-                                <label class="filter_mobile" for="s2">
-                                    <input type="checkbox" class="filters__check_mobile" id="s2">
-                                    History Museums
-                                </label>
-                                <label class="filter_mobile" for="s3">
-                                    <input type="checkbox" class="filters__check_mobile" id="s3">
-                                    Outdoor Museums
-                                </label>
-                            </div>
-                            <div class="filters__category">
-                                <div class="filters__category-title-wrap">
-                                    <span class="filters__category-title">neighborhoods</span>
-                                    <span class="filters__black-rect"></span>
+                                <div class="filters__category">
+                                    <div class="filters__category-title-wrap">
+                                        <span class="filters__category-title">neighborhoods</span>
+                                        <span class="filters__black-rect"></span>
+                                    </div>
+                                    <label class="filter_mobile" for="n1">
+                                        <input type="checkbox" class="filters__check_mobile" id="n1">
+                                        Flatron
+                                    </label>
+                                    <label class="filter_mobile" for="n2">
+                                        <input type="checkbox" class="filters__check_mobile" id="n2">
+                                        Chelsea
+                                    </label>
+                                    <label class="filter_mobile" for="n3">
+                                        <input type="checkbox" class="filters__check_mobile" id="n3">
+                                        Financial District
+                                    </label>
+                                    <label class="filter_mobile" for="n4">
+                                        <input type="checkbox" class="filters__check_mobile" id="n4">
+                                        Upper East Side
+                                    </label>
+                                    <label class="filter_mobile" for="n5">
+                                        <input type="checkbox" class="filters__check_mobile" id="n5">
+                                        Upper West Side
+                                    </label>
                                 </div>
-                                <label class="filter_mobile" for="n1">
-                                    <input type="checkbox" class="filters__check_mobile" id="n1">
-                                    Flatron
-                                </label>
-                                <label class="filter_mobile" for="n2">
-                                    <input type="checkbox" class="filters__check_mobile" id="n2">
-                                    Chelsea
-                                </label>
-                                <label class="filter_mobile" for="n3">
-                                    <input type="checkbox" class="filters__check_mobile" id="n3">
-                                    Financial District
-                                </label>
-                                <label class="filter_mobile" for="n4">
-                                    <input type="checkbox" class="filters__check_mobile" id="n4">
-                                    Upper East Side
-                                </label>
-                                <label class="filter_mobile" for="n5">
-                                    <input type="checkbox" class="filters__check_mobile" id="n5">
-                                    Upper West Side
-                                </label>
-                            </div>
-                            <div class="filters__category filters__category_last">
-                                <div class="filters__category-title-wrap">
-                                    <span class="filters__category-title">duration</span>
-                                    <span class="filters__black-rect"></span>
+                                <div class="filters__category filters__category_last">
+                                    <div class="filters__category-title-wrap">
+                                        <span class="filters__category-title">duration</span>
+                                        <span class="filters__black-rect"></span>
+                                    </div>
+                                    <label class="filter_mobile" for="d1">
+                                        <input type="checkbox" class="filters__check_mobile" id="d1">
+                                        Up to 1 Hour
+                                    </label>
+                                    <label class="filter_mobile" for="d2">
+                                        <input type="checkbox" class="filters__check_mobile" id="d2">
+                                        1-6 Hours
+                                    </label>
+                                    <label class="filter_mobile" for="d3">
+                                        <input type="checkbox" class="filters__check_mobile" id="d3">
+                                        4 Hours to 1 Day
+                                    </label>
+                                    <label class="filter_mobile" for="d4">
+                                        <input type="checkbox" class="filters__check_mobile" id="d4">
+                                        More Than 1 Day
+                                    </label>
                                 </div>
-                                <label class="filter_mobile" for="d1">
-                                    <input type="checkbox" class="filters__check_mobile" id="d1">
-                                    Up to 1 Hour
-                                </label>
-                                <label class="filter_mobile" for="d2">
-                                    <input type="checkbox" class="filters__check_mobile" id="d2">
-                                    1-6 Hours
-                                </label>
-                                <label class="filter_mobile" for="d3">
-                                    <input type="checkbox" class="filters__check_mobile" id="d3">
-                                    4 Hours to 1 Day
-                                </label>
-                                <label class="filter_mobile" for="d4">
-                                    <input type="checkbox" class="filters__check_mobile" id="d4">
-                                    More Than 1 Day
-                                </label>
-                            </div>
-                            <div class="filters__buttons-wrap_mobile">
-                                <button class="filter__button_mobile filter__reset" onclick="resetForm()">reset</button>
-                                <button class="filter__button_mobile filter__go" onclick="hideFilters()">go</button>
-                            </div>
-<!--                        </form>-->
+                                <div class="filters__buttons-wrap_mobile">
+                                    <button type="reset" class="filter__button_mobile filter__reset" onclick="resetForm()">reset</button>
+                                    <button class="filter__button_mobile filter__go" onclick="hideFilters()">go</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
+                    <div class="fade-block"></div>
                 </div>
             </aside>
             <section class="content">
