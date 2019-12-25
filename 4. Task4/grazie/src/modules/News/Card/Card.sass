@@ -1,0 +1,25 @@
+@import "./../../../App.sass"
+
+.news-item
+  background: $bg-white
+  min-height: 390px
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
+  border-radius: 16px
+  padding: 30px
+  color: #2e2e2e
+  margin: 0 40px 40px 0
+  width: calc(50% - 20px)
+  &:nth-child(2n)
+    margin-right: 0
+  &__name
+    font: 500 24px / 24px $main-font-family
+  &__says
+    font: 24px / 24px $main-font-family
+  &__text
+    font: 24px / 32px $main-font-family
+    margin-top: 18px
+
+@media screen and (max-width: 767px)
+  .news-item
+    margin: 0 40px 40px 40px
+    width: calc(100% - 80px)
