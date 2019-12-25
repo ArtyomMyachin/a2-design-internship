@@ -7,7 +7,7 @@ import Card from "./../Card";
 
 const Main = () => {
     return (
-        <div className="news-main">
+        <main className="news-main">
             <div className="container">
                 <div className="news-main-wrap">
                     <div className="news-main__back">
@@ -25,7 +25,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

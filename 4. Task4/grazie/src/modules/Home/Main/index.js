@@ -4,7 +4,7 @@ import "./Main.sass";
 
 const Main = () => {
     return (
-        <div className="main">
+        <main className="main">
             <div className="container">
                 <div className="main-wrap">
                     <div className="main__content">
@@ -13,7 +13,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

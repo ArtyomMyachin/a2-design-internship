@@ -4,14 +4,14 @@ import "./Header.sass";
 
 const Header = () => {
     return (
-        <div className="header">
+        <header className="header">
             <div className="container">
                 <div className="header-wrap">
                     <h1 className="header__title">Grazie!</h1>
                     <img src={logo} alt="Logo"/>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
