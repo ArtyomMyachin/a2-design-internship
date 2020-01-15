@@ -5,7 +5,7 @@ const Card = props => {
     const newsItem = props.item;
     const says = " says:";
     return (
-        <div class="news-item">
+        <article class="news-item">
             <div className="news-item__content">
                 <div className="news-item__author">
                     <span className="news-item__name">{newsItem.nickname}</span>
@@ -15,7 +15,7 @@ const Card = props => {
                     &quot;{newsItem.message}&quot;
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 
