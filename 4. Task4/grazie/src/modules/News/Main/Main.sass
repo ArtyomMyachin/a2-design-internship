@@ -28,9 +28,37 @@
     max-width: 371px
     margin: 0 auto
     text-align: center
+  &__filters
+    background: $bg-white
+    display: flex
+    justify-content: space-between
+    padding: 25px
+    border-radius: 16px
+    margin-bottom: 51px
+  &__filter
+    color: $color-white
+    font: $tab-font
+    display: block
+    padding: 15px 30px
+    background: #3E3E3E
+    border-radius: 64px
+    text-align: center
+    min-width: 170px
+    &:hover
+      background: $color-on-hover
+    &.active-tab
+      background: $color-active
   &__news
     display: flex
     flex-flow: wrap
 
 .news-main-wrap
   margin-top: 92px
+
+@media screen and (max-width: 767px)
+  .news-main
+    &__filters
+      flex-direction: column
+    //  flex-flow: wrap
+    //&__filter
+    //  width: 50%

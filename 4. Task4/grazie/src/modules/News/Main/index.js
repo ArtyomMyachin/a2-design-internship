@@ -24,10 +24,10 @@ const Main = () => {
                         </div>
                     </div>
                     <div className="news-main__filters">
-                        <button className="news-main__filter" onClick={() => setNewsType("all")}>All news</button>
-                        <button className="news-main__filter" onClick={() => setNewsType("global")}>Global</button>
-                        <button className="news-main__filter" onClick={() => setNewsType("politics")}>Politics</button>
-                        <button className="news-main__filter" onClick={() => setNewsType("art")}>Art</button>
+                        <button className={"news-main__filter" + (newsType === "all" ? " active-tab" : "")} onClick={() => setNewsType("all")}>All news</button>
+                        <button className={"news-main__filter" + (newsType === "global" ? " active-tab" : "")} onClick={() => setNewsType("global")}>Global</button>
+                        <button className={"news-main__filter" + (newsType === "politics" ? " active-tab" : "")} onClick={() => setNewsType("politics")}>Politics</button>
+                        <button className={"news-main__filter" + (newsType === "art" ? " active-tab" : "")} onClick={() => setNewsType("art")}>Art</button>
                     </div>
                     <div className="news-main__news">
                         {
