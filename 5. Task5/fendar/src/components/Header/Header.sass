@@ -1,0 +1,39 @@
+@import './../../App.sass'
+@import url('https://fonts.googleapis.com/css?family=Rochester&display=swap')
+
+.header-wrap
+  display: flex
+  justify-content: space-between
+  padding: 10px 0
+
+.header
+  position: fixed
+  z-index: 1
+  width: 100%
+  background: #fff fixed
+  &__logo
+    //flex-shrink: 0
+    width: 60px
+    height: 60px
+    font: 76px / 99px "Rochester", cursive
+    color: $white-text
+    text-shadow: 0 2px 4px rgba(46, 46, 46, 0.4)
+    text-transform: uppercase
+    display: block
+    background: $black
+    text-align: center
+    border-radius: 7px
+  &__nav-list
+    width: 272px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    list-style-type: none
+    padding: 0
+  &__nav-link
+    text-decoration: none
+    font: 24px / 28px $main-font-family
+    color: $black
+    text-transform: capitalize
+    &.current-page
+      background: url("../../assets/images/point.png") no-repeat top right

@@ -1,0 +1,35 @@
+@import "./../../App.sass"
+
+.user
+  background: $white-text url("../../assets/images/user_bg.png") no-repeat center bottom
+  box-shadow: 2px 2px 16px rgba(46, 46, 46, 0.25)
+  border-radius: 8px
+  padding: 20px 0 70px 0
+  margin: 0 60px 60px 0
+  width: calc((100% - 120px) / 3)
+  text-align: center
+  &:nth-child(3n)
+    margin-right: 0
+  &__avatar
+    display: block
+    margin: 0 auto
+    padding: 42px 0
+    text-align: center
+    font: 300 56px / 66px $main-font-family
+    letter-spacing: 0.1em
+    color: $white-text
+    width: 150px
+    height: 150px
+    border-radius: 100px
+  &__name
+    font: 500 $standard-text
+    color: $black
+    margin: 20px 0 0 0
+  &__site
+    font: $standard-text
+    color: $gray
+    text-decoration: none
+    margin-top: 10px
+    display: block
+  &__link
+    text-decoration: none
