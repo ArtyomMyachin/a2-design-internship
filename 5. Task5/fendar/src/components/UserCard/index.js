@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 
 const UserCard = props => {
     const [h, s, l] = [props.user.color.h, props.user.color.s, props.user.color.l];
-    // const [h, s, l] = ["120", "50%", "50%"];
     return (
       <article className="user">
           <Link to={"/people/" + props.user.id} className="user__link">

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {connect} from "react-redux";
-import FeedCard from "../../components/FeedCard";
+import FeedCard from "../FeedCard";
 import {fetchAllPosts, fetchAllUsers, fetchPostsByUserId, toggleModal} from "../../actions";
 
 const Feed = props => {

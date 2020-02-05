@@ -4,9 +4,12 @@ import Main from './Main';
 import PostModal from "../../../containers/PostModal";
 
 const Feed = () => {
+
+    const isCurrent = [false, false, true];
+
     return (
         <div className="feed">
-            <Header/>
+            <Header isCurrent={isCurrent}/>
             <Main/>
             <PostModal/>
         </div>

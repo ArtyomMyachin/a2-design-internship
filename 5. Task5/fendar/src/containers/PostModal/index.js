@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import ProfileCard from "../../components/ProfileCard";
 import {fetchAllPosts, fetchAllUsers, fetchCommentsByPostId, toggleModal} from "../../actions";
 import {connect} from "react-redux";
-import Post from "../../components/FeedCard/Post";
+import Post from "../../components/Post";
 import Comment from "../../components/Comment";
 import "./PostModal.sass";
 
@@ -18,7 +18,7 @@ const PostModal = props => {
         <div className="post-modal-wrap">
             {(!props.modalIsVisible) || (currentPost === undefined) ? "" :
             <div className="post-modal" onClick={ () => props.toggleModal(false) }>
-                <article className="post-modal__content">
+                <article className="post-modal__content" onClick="event.stopImmediatePropagation()">
                     <Post post={currentPost} user={props.users.find(
                         e => e.id === currentPost.userId
                     )}/>

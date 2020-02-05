@@ -4,10 +4,13 @@ import Main from './Main';
 import PostModal from "../../../containers/PostModal";
 
 const Profile = props => {
+
     const id = props.match.params.id;
+    const isCurrent = [false, true, false];
+
     return (
         <div className="profile">
-            <Header/>
+            <Header isCurrent={isCurrent}/>
             <Main id={id}/>
             <PostModal/>
         </div>

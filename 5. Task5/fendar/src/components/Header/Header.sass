@@ -30,10 +30,16 @@
     justify-content: space-between
     list-style-type: none
     padding: 0
+  &__nav-item
+    padding: 4px 5px
+    &.current-page
+      background: url("../../assets/images/point.png") no-repeat right top
   &__nav-link
     text-decoration: none
     font: 24px / 28px $main-font-family
     color: $black
     text-transform: capitalize
+    &:hover
+      color: #FF7F50
     &.current-page
       background: url("../../assets/images/point.png") no-repeat top right

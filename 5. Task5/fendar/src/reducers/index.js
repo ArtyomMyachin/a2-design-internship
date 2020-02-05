@@ -1,7 +1,8 @@
+import {getRandomColor} from "../helpers";
+
 const initialState = {
     userList: [],
     postList: [],
-    // currentPost: undefined,
     commentList: [],
     modalIsVisible: false
 };
@@ -9,7 +10,17 @@ const initialState = {
 export const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case "FETCH_ALL_USERS":
-            return {...state, userList: action.payload};
+            let users = action.payload;
+            if(state.userList.length === 0) {
+                users.forEach( e => {
+                    e.color = getRandomColor();
+                });
+            } else {
+                users.forEach( (e, i) => {
+                    e.color = state.userList[i].color;
+                } );
+            }
+            return {...state, userList: users};
         default:
             return state;
     }
@@ -19,8 +30,6 @@ export const postReducer = (state = initialState, action) => {
     switch (action.type) {
         case "FETCH_ALL_POSTS":
             return {...state, postList: action.payload};
-        // case "SAVE_POST":
-        //     return {...state, currentPost: action.payload};
         default:
             return state;
     }

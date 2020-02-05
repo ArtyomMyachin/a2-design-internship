@@ -3,9 +3,12 @@ import Header from './../../Header';
 import Main from './Main';
 
 const Home = () => {
+
+    const isCurrent = [true, false, false];
+
     return (
         <div className="home">
-            <Header/>
+            <Header isCurrent={isCurrent}/>
             <Main/>
         </div>
     );

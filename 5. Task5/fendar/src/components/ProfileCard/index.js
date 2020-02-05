@@ -4,7 +4,6 @@ import "./ProfileCard.sass";
 
 const ProfileCard = props => {
     const [h, s, l] = [props.user.color.h, props.user.color.s, props.user.color.l];
-    // const [h, s, l] = ["120", "50%", "50%"];
     return (
       <article className="user-profile">
           <div className="user-profile-wrap">

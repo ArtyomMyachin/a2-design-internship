@@ -12,7 +12,6 @@ const Profile = props => {
 
     return (
         <div className="profile">
-            {/*{console.log(props.users[0])}*/}
             {props.users[props.id - 1] !== undefined ? <ProfileCard user={props.users[props.id - 1]} posts={props.posts}/> : ""}
         </div>
     );

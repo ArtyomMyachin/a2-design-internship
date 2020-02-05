@@ -13,10 +13,10 @@ function App() {
   return (
       <Router history={history}>
         <Switch>
-          <Route path="/" exact component={Home}/>
           <Route path="/people" exact component={People}/>
           <Route path="/people/:id" exact component={Profile}/>
           <Route path="/feed" exact component={Feed}/>
+          <Route path="*" exact component={Home}/>
         </Switch>
       </Router>
   );
